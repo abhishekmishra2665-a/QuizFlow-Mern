@@ -1,0 +1,255 @@
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={theme:{extend:{"colors":{"on-error-container":"#93000a","secondary-fixed-dim":"#adc6ff","outline-variant":"#c6c6cd","surface-container-highest":"#d3e4fe","on-tertiary-container":"#818486","surface-variant":"#d3e4fe","on-secondary":"#ffffff","background":"#f8f9ff","on-surface":"#0b1c30","on-secondary-fixed":"#001a42","surface-container-high":"#dce9ff","surface-container":"#e5eeff","secondary":"#0058be","on-surface-variant":"#45464d","inverse-on-surface":"#eaf1ff","on-primary-container":"#7c839b","surface-dim":"#cbdbf5","primary-container":"#131b2e","error-container":"#ffdad6","error":"#ba1a1a","inverse-primary":"#bec6e0","secondary-container":"#2170e4","surface":"#f8f9ff","primary-fixed":"#dae2fd","secondary-fixed":"#d8e2ff","surface-bright":"#f8f9ff","on-primary-fixed-variant":"#3f465c","on-tertiary":"#ffffff","on-secondary-container":"#fefcff","on-primary-fixed":"#131b2e","on-background":"#0b1c30","surface-container-low":"#eff4ff","on-tertiary-fixed":"#191c1e","surface-container-lowest":"#ffffff","on-primary":"#ffffff","tertiary-fixed-dim":"#c4c7c9","surface-tint":"#565e74","on-error":"#ffffff","primary-fixed-dim":"#bec6e0","on-secondary-fixed-variant":"#004395","on-tertiary-fixed-variant":"#444749","primary":"#000000","inverse-surface":"#213145","outline":"#76777d","tertiary-fixed":"#e0e3e5","tertiary":"#000000","tertiary-container":"#191c1e"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-mobile":"16px","margin-desktop":"40px","container-max":"1280px","unit":"8px","gutter":"24px"},"fontFamily":{"body-lg":["Manrope"],"display-lg":["Manrope"],"headline-md":["Manrope"],"body-md":["Manrope"],"display-lg-mobile":["Manrope"],"label-sm":["Inter"]},"fontSize":{"body-lg":["18px",{"lineHeight":"1.6","fontWeight":"400"}],"display-lg":["48px",{"lineHeight":"1.2","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"1.4","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"1.6","fontWeight":"400"}],"display-lg-mobile":["32px",{"lineHeight":"1.2","fontWeight":"700"}],"label-sm":["13px",{"lineHeight":"1","letterSpacing":"0.01em","fontWeight":"500"}]}}}}</script><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Inter:wght@500&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-primary-container text-on-primary-container z-50 flex flex-col shadow-xl"><div class="p-8 mb-4 flex items-center gap-3"><img alt="QuizFlow Logo" class="h-8 w-auto invert grayscale brightness-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM8JZqmlHGotYUDx2XsNinNOY2TomfTTlZp5IhH9gZqNaAa8uBNMsk_yau3i1TC-08i1cnkVM8qzfTh1uJlP2CLQPpgMtJo5-d5hY7sMrSyQATbQcviTP4nLyYqL58C0o1rRBk6Ifjv8o9zpyYwCIuVA1mTUbefoj1YvpNAf7T6wdUmnvTMnAYsnjYDsg_mtYbv8IASeJpFgF3z1bgEoS-o1lveYRv99sHALtYCAxi39rPVWH2ztJFsA"/><span class="font-headline-md text-headline-md">QuizFlow</span></div><nav class="flex-1 px-4 space-y-2" data-active-classes="bg-secondary-container text-on-secondary-container rounded-xl shadow-md"><div class="text-on-primary-container/40 text-label-sm font-label-sm px-4 mb-2 mt-6 uppercase tracking-widest">Main Console</div><a class="flex items-center px-4 py-3 text-body-md font-body-md transition-all hover:bg-surface-variant/10" data-path="dashboard" href="#"><span class="material-symbols-outlined mr-3">dashboard</span>Dashboard</a><a aria-current="page" class="flex items-center px-4 py-3 font-body-md transition-all bg-secondary-container text-on-secondary-container rounded-xl shadow-md" data-path="manage-batches" href="#"><span class="material-symbols-outlined mr-3">group_work</span>Manage Batches</a><a class="flex items-center px-4 py-3 text-body-md font-body-md transition-all hover:bg-surface-variant/10" data-path="manage-students" href="#"><span class="material-symbols-outlined mr-3">school</span>Manage Students</a><div class="text-on-primary-container/40 text-label-sm font-label-sm px-4 mb-2 mt-6 uppercase tracking-widest">Assessment</div><a class="flex items-center px-4 py-3 text-body-md font-body-md transition-all hover:bg-surface-variant/10" data-path="manage-quiz" href="#"><span class="material-symbols-outlined mr-3">quiz</span>Manage Quiz</a><a class="flex items-center px-4 py-3 text-body-md font-body-md transition-all hover:bg-surface-variant/10" data-path="quiz-builder" href="#"><span class="material-symbols-outlined mr-3">edit_note</span>Quiz Builder</a><a class="flex items-center px-4 py-3 text-body-md font-body-md transition-all hover:bg-surface-variant/10" data-path="attempt-quizzes" href="#"><span class="material-symbols-outlined mr-3">play_circle</span>Attempt Quizzes</a></nav></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-margin-desktop"><div class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined">search</span><span class="text-label-sm font-label-sm">Search quizzes, students or reports...</span></div><div class="flex items-center gap-gutter"><div class="flex flex-col items-end"><span class="text-label-sm font-label-sm text-on-surface">Institution Admin</span><span class="text-[11px] text-on-surface-variant">admin@quizflow.edu</span></div><img alt="Profile" class="w-10 h-10 rounded-full object-cover ring-2 ring-surface-container-high transition-transform hover:scale-105 shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWMqjgzrR9eLMPt0XlTUWywCHHvBNfA-1hdoeS_PQPYBNfnDVbVk5zbq7y3WmGMVLWc14Gn982Gzhu7MGwNL-oUVQKbLcIvRpFm2dzh5BJken9YKsSYgy1_GxNv4L5H7D3_Jw9Tz1I8Hq0gmZfyqRjMo9GnrKRXiNgsznqRo8eRc08cnupiNBSljX3qhOqSQVXspe1s2d6oaDM7TvHzXRybEZ8Ox80ylmY25v08ohWHq9j3JW62Invsw"/></div></header><main class="relative pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-margin-desktop py-12 flex flex-col gap-gutter">
+<!-- Header Section -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col gap-2">
+<h1 class="font-display-lg text-display-lg text-on-surface">Manage Batches</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Create and organize student batches. Assign quizzes and monitor cohort performance.</p>
+</div>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-xl font-label-sm text-label-sm tracking-wide shadow-md hover:shadow-lg transition-all flex items-center gap-2 group">
+<span class="material-symbols-outlined transition-transform group-hover:scale-110">add_circle</span>
+        Add New Batch
+      </button>
+</div>
+<!-- Data Visualization Area (To make it more interesting than just a table) -->
+<div class="grid grid-cols-12 gap-gutter mb-6">
+<!-- Stat Card 1 -->
+<div class="col-span-12 md:col-span-4 bg-surface-container rounded-2xl p-6 shadow-sm flex items-center justify-between relative overflow-hidden group">
+<div class="z-10 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Batches</span>
+<span class="font-display-lg text-display-lg text-on-surface">24</span>
+</div>
+<div class="z-10 bg-surface text-secondary p-4 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-3xl">groups</span>
+</div>
+<div class="absolute -bottom-8 -right-8 w-32 h-32 bg-secondary/10 rounded-full blur-2xl transition-transform group-hover:scale-150 duration-700"></div>
+</div>
+<!-- Stat Card 2 -->
+<div class="col-span-12 md:col-span-4 bg-surface-container rounded-2xl p-6 shadow-sm flex items-center justify-between relative overflow-hidden group">
+<div class="z-10 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active Students</span>
+<span class="font-display-lg text-display-lg text-on-surface">856</span>
+</div>
+<div class="z-10 bg-surface text-secondary p-4 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<div class="absolute -bottom-8 -right-8 w-32 h-32 bg-secondary/10 rounded-full blur-2xl transition-transform group-hover:scale-150 duration-700"></div>
+</div>
+<!-- Decorative Area / Chart Placeholder -->
+<div class="col-span-12 md:col-span-4 bg-primary-container text-on-primary-container rounded-2xl p-6 shadow-md relative overflow-hidden flex flex-col justify-between">
+<span class="font-headline-md text-headline-md z-10">Cohort Growth</span>
+<div class="mt-4 z-10">
+<svg class="w-full h-12 stroke-on-primary-container fill-none" preserveaspectratio="none" viewbox="0 0 100 30">
+<path d="M0,30 L10,25 L20,28 L30,15 L40,20 L50,10 L60,18 L70,5 L80,12 L90,2 L100,8" stroke-width="2" vector-effect="non-scaling-stroke"></path>
+<path class="opacity-10" d="M0,30 L10,25 L20,28 L30,15 L40,20 L50,10 L60,18 L70,5 L80,12 L90,2 L100,8 L100,30 L0,30 Z" fill="currentColor" stroke="none"></path>
+</svg>
+</div>
+<div class="absolute -top-12 -left-12 w-48 h-48 bg-on-primary-container/5 rounded-full blur-xl"></div>
+</div>
+</div>
+<!-- Toolbar / Filters -->
+<div class="bg-surface-container-lowest rounded-t-2xl p-4 shadow-[0_-4px_12px_rgba(0,0,0,0.02)] flex items-center justify-between gap-4 flex-wrap">
+<div class="flex items-center gap-4 bg-surface-container-low px-4 py-2 rounded-xl flex-1 max-w-md focus-within:ring-2 ring-secondary/20 transition-shadow">
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+<input class="bg-transparent border-none outline-none font-body-md text-body-md text-on-surface w-full placeholder:text-on-surface-variant/60" placeholder="Search batches..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<button class="bg-surface border border-outline-variant px-4 py-2 rounded-xl flex items-center gap-2 font-label-sm text-label-sm text-on-surface hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+                Filter
+            </button>
+<button class="bg-surface border border-outline-variant px-4 py-2 rounded-xl flex items-center gap-2 font-label-sm text-label-sm text-on-surface hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">sort</span>
+                Sort By
+            </button>
+</div>
+</div>
+<!-- Data Table Container -->
+<div class="bg-surface-container-lowest rounded-b-2xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/50">
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-medium">Batch Name</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-medium">Instructor</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-medium text-right">Student Count</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-medium text-right">Assigned Quizzes</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-medium text-center">Status</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-medium text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-lowest/80 transition-colors group">
+<td class="py-4 px-6 border-b border-surface-container-low">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-headline-md text-headline-md">
+                                    J
+                                </div>
+<div class="flex flex-col">
+<span class="font-medium">JEE Advanced 2024 - Alpha</span>
+<span class="text-label-sm text-on-surface-variant">Morning Shift</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 border-b border-surface-container-low">
+<div class="flex items-center gap-2">
+<img class="w-8 h-8 rounded-full object-cover shadow-sm" data-alt="Professional headshot of a teacher, well lit, neutral background, looking friendly and authoritative, wearing formal academic attire." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVPKnLuyykwPFiGyOqoiVylZtAJLR2zNDsGV4V-HGfd1pkhVGBlnN4nUZ3SsebRkAwO8TL9Omo9cXX6ZOJ8h2kMLa4Lz_KC7Fmc8ll7hzWzRzsXBZ9_TJJRzzNKyrDKpYgd6CYCCDJ3ixx9Xqp_6cWcX8u3bGP-sJJRAARj2rQUWse4u0Piv9v8GFhSdEQo2NrfaSMLC27HhgU3d3y8KS5cTnw5PW3IK27iB2euZl-Jcuhel2EHQ0vzA"/>
+<span>Dr. R. Sharma</span>
+</div>
+</td>
+<td class="py-4 px-6 border-b border-surface-container-low text-right font-medium">124</td>
+<td class="py-4 px-6 border-b border-surface-container-low text-right">18</td>
+<td class="py-4 px-6 border-b border-surface-container-low text-center">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/20 text-secondary-container font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>Active
+                            </span>
+</td>
+<td class="py-4 px-6 border-b border-surface-container-low text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-on-surface-variant hover:text-secondary hover:bg-surface-container rounded-lg transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-secondary hover:bg-surface-container rounded-lg transition-colors" title="View Details">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-lowest/80 transition-colors group">
+<td class="py-4 px-6 border-b border-surface-container-low">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-variant text-on-surface-variant flex items-center justify-center font-headline-md text-headline-md">
+                                    N
+                                </div>
+<div class="flex flex-col">
+<span class="font-medium">NEET Droppers - Beta</span>
+<span class="text-label-sm text-on-surface-variant">Evening Shift</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 border-b border-surface-container-low">
+<div class="flex items-center gap-2">
+<img class="w-8 h-8 rounded-full object-cover shadow-sm" data-alt="Professional headshot of a female professor, warm lighting, soft background, wearing a smart casual blazer." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnyvnjwVNbxmNB1turKMQDIj6EX9XbQx12T_5DItusbYWKQQ9zQmU6Q8V61b3WaskdyXOhIflnfVJgsmKXmq80IV9JQnS-oc_wqn90ZI5Isn9u1uIpCNDXFR9BIZzwDbsSyd24WqXBqqUDM37EDXKeEELsVfT4m169kdT91xKis7gU4gspZV7km47YpSXidYuuBHdSAVvPgDivGmmMxytZqoT7jaRVvw6W6r_uHbO2jLFoyCJpjIzQkw"/>
+<span>Prof. A. Gupta</span>
+</div>
+</td>
+<td class="py-4 px-6 border-b border-surface-container-low text-right font-medium">85</td>
+<td class="py-4 px-6 border-b border-surface-container-low text-right">12</td>
+<td class="py-4 px-6 border-b border-surface-container-low text-center">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/20 text-secondary-container font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>Active
+                            </span>
+</td>
+<td class="py-4 px-6 border-b border-surface-container-low text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-on-surface-variant hover:text-secondary hover:bg-surface-container rounded-lg transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-secondary hover:bg-surface-container rounded-lg transition-colors" title="View Details">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-lowest/80 transition-colors group">
+<td class="py-4 px-6 border-b border-surface-container-low">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest text-on-surface flex items-center justify-center font-headline-md text-headline-md">
+                                    C
+                                </div>
+<div class="flex flex-col">
+<span class="font-medium">Foundation Class 10</span>
+<span class="text-label-sm text-on-surface-variant">Weekend Batch</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 border-b border-surface-container-low">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-label-sm font-bold shadow-sm">
+                                    VK
+                                </div>
+<span>Mr. V. Kumar</span>
+</div>
+</td>
+<td class="py-4 px-6 border-b border-surface-container-low text-right font-medium">45</td>
+<td class="py-4 px-6 border-b border-surface-container-low text-right">5</td>
+<td class="py-4 px-6 border-b border-surface-container-low text-center">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-outline-variant/30 text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-outline"></span>Upcoming
+                            </span>
+</td>
+<td class="py-4 px-6 border-b border-surface-container-low text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-on-surface-variant hover:text-secondary hover:bg-surface-container rounded-lg transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-secondary hover:bg-surface-container rounded-lg transition-colors" title="View Details">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-lowest/80 transition-colors group">
+<td class="py-4 px-6 border-b border-surface-container-low">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-variant text-on-surface-variant flex items-center justify-center font-headline-md text-headline-md">
+                                    N
+                                </div>
+<div class="flex flex-col">
+<span class="font-medium">NEET Fastrack 2024</span>
+<span class="text-label-sm text-on-surface-variant">Intensive</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 border-b border-surface-container-low">
+<div class="flex items-center gap-2">
+<img class="w-8 h-8 rounded-full object-cover shadow-sm" data-alt="Professional headshot of a female professor, warm lighting, soft background, wearing a smart casual blazer." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBco6Fos8jwwyWEJebeqjctYfucCBFluW-X5fAFeUSSI7mPKfejZ19htGrfEbLZl3oTk8xISzhXrWvBGJ3BCOB6wQ8tcHgORnKsiB6LwZD5Qvvg5xBNNucyYE-R-_Kf5OnPtMwawJXbk-4RVMXEReDpoNyaH1qU6tYtuZgtr6rX411FdtMxmmAlpD_6VqJ-FboUT9wKSu0eoux0iaH0dFnaGEOER3EjEonBVyUJ1NPiOzYqpJpWqXDUYw"/>
+<span>Prof. A. Gupta</span>
+</div>
+</td>
+<td class="py-4 px-6 border-b border-surface-container-low text-right font-medium">112</td>
+<td class="py-4 px-6 border-b border-surface-container-low text-right">24</td>
+<td class="py-4 px-6 border-b border-surface-container-low text-center">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/20 text-secondary-container font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>Active
+                            </span>
+</td>
+<td class="py-4 px-6 border-b border-surface-container-low text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-on-surface-variant hover:text-secondary hover:bg-surface-container rounded-lg transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-secondary hover:bg-surface-container rounded-lg transition-colors" title="View Details">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="px-6 py-4 border-t border-surface-container-low flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Showing 1 to 4 of 24 entries</span>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg bg-surface hover:bg-surface-container-low text-on-surface-variant disabled:opacity-50 transition-colors" disabled="">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm flex items-center justify-center">1</button>
+<button class="w-8 h-8 rounded-lg bg-surface hover:bg-surface-container-low text-on-surface font-label-sm text-label-sm flex items-center justify-center transition-colors">2</button>
+<button class="w-8 h-8 rounded-lg bg-surface hover:bg-surface-container-low text-on-surface font-label-sm text-label-sm flex items-center justify-center transition-colors">3</button>
+<span class="text-on-surface-variant">...</span>
+<button class="p-2 rounded-lg bg-surface hover:bg-surface-container-low text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

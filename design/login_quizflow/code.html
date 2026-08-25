@@ -1,0 +1,83 @@
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={theme:{extend:{"colors":{"on-error-container":"#93000a","secondary-fixed-dim":"#adc6ff","outline-variant":"#c6c6cd","surface-container-highest":"#d3e4fe","on-tertiary-container":"#818486","surface-variant":"#d3e4fe","on-secondary":"#ffffff","background":"#f8f9ff","on-surface":"#0b1c30","on-secondary-fixed":"#001a42","surface-container-high":"#dce9ff","surface-container":"#e5eeff","secondary":"#0058be","on-surface-variant":"#45464d","inverse-on-surface":"#eaf1ff","on-primary-container":"#7c839b","surface-dim":"#cbdbf5","primary-container":"#131b2e","error-container":"#ffdad6","error":"#ba1a1a","inverse-primary":"#bec6e0","secondary-container":"#2170e4","surface":"#f8f9ff","primary-fixed":"#dae2fd","secondary-fixed":"#d8e2ff","surface-bright":"#f8f9ff","on-primary-fixed-variant":"#3f465c","on-tertiary":"#ffffff","on-secondary-container":"#fefcff","on-primary-fixed":"#131b2e","on-background":"#0b1c30","surface-container-low":"#eff4ff","on-tertiary-fixed":"#191c1e","surface-container-lowest":"#ffffff","on-primary":"#ffffff","tertiary-fixed-dim":"#c4c7c9","surface-tint":"#565e74","on-error":"#ffffff","primary-fixed-dim":"#bec6e0","on-secondary-fixed-variant":"#004395","on-tertiary-fixed-variant":"#444749","primary":"#000000","inverse-surface":"#213145","outline":"#76777d","tertiary-fixed":"#e0e3e5","tertiary":"#000000","tertiary-container":"#191c1e"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-mobile":"16px","margin-desktop":"40px","container-max":"1280px","unit":"8px","gutter":"24px"},"fontFamily":{"body-lg":["Manrope"],"display-lg":["Manrope"],"headline-md":["Manrope"],"body-md":["Manrope"],"display-lg-mobile":["Manrope"],"label-sm":["Inter"]},"fontSize":{"body-lg":["18px",{"lineHeight":"1.6","fontWeight":"400"}],"display-lg":["48px",{"lineHeight":"1.2","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"1.4","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"1.6","fontWeight":"400"}],"display-lg-mobile":["32px",{"lineHeight":"1.2","fontWeight":"700"}],"label-sm":["13px",{"lineHeight":"1","letterSpacing":"0.01em","fontWeight":"500"}]}}}}</script><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Inter:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body-md text-on-surface"><main class="w-full flex items-center justify-center min-h-screen bg-surface"><div class="flex flex-col w-full h-full items-center justify-center p-4">
+<div class="relative w-full max-w-md bg-surface-container-lowest rounded-xl p-8 md:p-12 shadow-sm transition-shadow duration-300 hover:shadow-md">
+<div class="mb-10 text-center">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-2">QuizFlow</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Sign in to your account</p>
+</div>
+<form class="space-y-6">
+<div class="flex bg-surface-container p-1 rounded-lg mb-8 relative">
+<div class="absolute inset-y-1 left-1 w-[calc(50%-4px)] bg-surface-container-lowest rounded-md shadow-sm transition-transform duration-300 ease-in-out" id="role-slider"></div>
+<button class="relative z-10 flex-1 py-2 text-center font-label-sm text-label-sm text-primary transition-colors duration-200" id="btn-student" onclick="setRole('student')" type="button">Student</button>
+<button class="relative z-10 flex-1 py-2 text-center font-label-sm text-label-sm text-on-surface-variant transition-colors duration-200" id="btn-admin" onclick="setRole('admin')" type="button">Administrator</button>
+</div>
+<div class="space-y-1 relative group">
+<label class="block font-label-sm text-label-sm text-on-surface-variant transition-colors group-focus-within:text-secondary" for="email">Email Address</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant group-focus-within:text-secondary pointer-events-none transition-colors">mail</span>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg py-3 pl-10 pr-4 transition-all duration-200 outline-none hover:shadow-[0_2px_8px_rgba(15,23,42,0.04)] focus:shadow-[0_0_0_2px_rgba(0,88,190,0.2)] focus:bg-surface-container-low" id="email" placeholder="name@institute.edu" required="" type="email"/>
+</div>
+</div>
+<div class="space-y-1 relative group">
+<div class="flex justify-between items-center">
+<label class="block font-label-sm text-label-sm text-on-surface-variant transition-colors group-focus-within:text-secondary" for="password">Password</label>
+<a class="font-label-sm text-label-sm text-secondary hover:text-secondary-container transition-colors" href="#">Forgot Password?</a>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant group-focus-within:text-secondary pointer-events-none transition-colors">lock</span>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg py-3 pl-10 pr-10 transition-all duration-200 outline-none hover:shadow-[0_2px_8px_rgba(15,23,42,0.04)] focus:shadow-[0_0_0_2px_rgba(0,88,190,0.2)] focus:bg-surface-container-low" id="password" placeholder="••••••••" required="" type="password"/>
+<button class="absolute right-3 text-on-surface-variant hover:text-on-surface transition-colors focus:outline-none" onclick="togglePassword()" type="button">
+<span class="material-symbols-outlined" id="toggle-icon">visibility</span>
+</button>
+</div>
+</div>
+<button class="w-full bg-secondary text-on-secondary font-headline-md text-headline-md rounded-lg py-3 mt-4 transition-all duration-200 hover:bg-secondary-container hover:shadow-[0_4px_12px_rgba(0,88,190,0.15)] active:scale-[0.98] flex items-center justify-center gap-2 group" type="submit">
+<span>Login</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+</button>
+</form>
+</div>
+<div class="mt-8 text-center max-w-sm">
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">shield</span>
+            Secure Institutional Access
+        </p>
+</div>
+</div>
+<script>
+    function setRole(role) {
+        const slider = document.getElementById('role-slider');
+        const btnStudent = document.getElementById('btn-student');
+        const btnAdmin = document.getElementById('btn-admin');
+        const emailInput = document.getElementById('email');
+
+        if (role === 'admin') {
+            slider.style.transform = 'translateX(100%)';
+            btnAdmin.classList.remove('text-on-surface-variant');
+            btnAdmin.classList.add('text-primary');
+            btnStudent.classList.remove('text-primary');
+            btnStudent.classList.add('text-on-surface-variant');
+            emailInput.placeholder = "admin@institute.edu";
+        } else {
+            slider.style.transform = 'translateX(0)';
+            btnStudent.classList.remove('text-on-surface-variant');
+            btnStudent.classList.add('text-primary');
+            btnAdmin.classList.remove('text-primary');
+            btnAdmin.classList.add('text-on-surface-variant');
+            emailInput.placeholder = "student@institute.edu";
+        }
+    }
+
+    function togglePassword() {
+        const passwordInput = document.getElementById('password');
+        const toggleIcon = document.getElementById('toggle-icon');
+        
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            toggleIcon.textContent = 'visibility_off';
+        } else {
+            passwordInput.type = 'password';
+            toggleIcon.textContent = 'visibility';
+        }
+    }
+</script></main></body></html>

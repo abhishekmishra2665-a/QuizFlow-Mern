@@ -1,0 +1,253 @@
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={theme:{extend:{"colors":{"on-error-container":"#93000a","secondary-fixed-dim":"#adc6ff","outline-variant":"#c6c6cd","surface-container-highest":"#d3e4fe","on-tertiary-container":"#818486","surface-variant":"#d3e4fe","on-secondary":"#ffffff","background":"#f8f9ff","on-surface":"#0b1c30","on-secondary-fixed":"#001a42","surface-container-high":"#dce9ff","surface-container":"#e5eeff","secondary":"#0058be","on-surface-variant":"#45464d","inverse-on-surface":"#eaf1ff","on-primary-container":"#7c839b","surface-dim":"#cbdbf5","primary-container":"#131b2e","error-container":"#ffdad6","error":"#ba1a1a","inverse-primary":"#bec6e0","secondary-container":"#2170e4","surface":"#f8f9ff","primary-fixed":"#dae2fd","secondary-fixed":"#d8e2ff","surface-bright":"#f8f9ff","on-primary-fixed-variant":"#3f465c","on-tertiary":"#ffffff","on-secondary-container":"#fefcff","on-primary-fixed":"#131b2e","on-background":"#0b1c30","surface-container-low":"#eff4ff","on-tertiary-fixed":"#191c1e","surface-container-lowest":"#ffffff","on-primary":"#ffffff","tertiary-fixed-dim":"#c4c7c9","surface-tint":"#565e74","on-error":"#ffffff","primary-fixed-dim":"#bec6e0","on-secondary-fixed-variant":"#004395","on-tertiary-fixed-variant":"#444749","primary":"#000000","inverse-surface":"#213145","outline":"#76777d","tertiary-fixed":"#e0e3e5","tertiary":"#000000","tertiary-container":"#191c1e"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-mobile":"16px","margin-desktop":"40px","container-max":"1280px","unit":"8px","gutter":"24px"},"fontFamily":{"body-lg":["Manrope"],"display-lg":["Manrope"],"headline-md":["Manrope"],"body-md":["Manrope"],"display-lg-mobile":["Manrope"],"label-sm":["Inter"]},"fontSize":{"body-lg":["18px",{"lineHeight":"1.6","fontWeight":"400"}],"display-lg":["48px",{"lineHeight":"1.2","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"1.4","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"1.6","fontWeight":"400"}],"display-lg-mobile":["32px",{"lineHeight":"1.2","fontWeight":"700"}],"label-sm":["13px",{"lineHeight":"1","letterSpacing":"0.01em","fontWeight":"500"}]}}}}</script><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Inter:wght@500&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-primary-container text-on-primary-container z-50 flex flex-col shadow-xl"><div class="p-8 mb-4 flex items-center gap-3"><img alt="QuizFlow Logo" class="h-8 w-auto invert grayscale brightness-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM8JZqmlHGotYUDx2XsNinNOY2TomfTTlZp5IhH9gZqNaAa8uBNMsk_yau3i1TC-08i1cnkVM8qzfTh1uJlP2CLQPpgMtJo5-d5hY7sMrSyQATbQcviTP4nLyYqL58C0o1rRBk6Ifjv8o9zpyYwCIuVA1mTUbefoj1YvpNAf7T6wdUmnvTMnAYsnjYDsg_mtYbv8IASeJpFgF3z1bgEoS-o1lveYRv99sHALtYCAxi39rPVWH2ztJFsA"/><span class="font-headline-md text-headline-md">QuizFlow</span></div><nav class="flex-1 px-4 space-y-2" data-active-classes="bg-secondary-container text-on-secondary-container rounded-xl shadow-md"><div class="text-on-primary-container/40 text-label-sm font-label-sm px-4 mb-2 mt-6 uppercase tracking-widest">Main Console</div><a class="flex items-center px-4 py-3 text-body-md font-body-md transition-all hover:bg-surface-variant/10" data-path="dashboard" href="#"><span class="material-symbols-outlined mr-3">dashboard</span>Dashboard</a><a class="flex items-center px-4 py-3 text-body-md font-body-md transition-all hover:bg-surface-variant/10" data-path="manage-batches" href="#"><span class="material-symbols-outlined mr-3">group_work</span>Manage Batches</a><a class="flex items-center px-4 py-3 text-body-md font-body-md transition-all hover:bg-surface-variant/10" data-path="manage-students" href="#"><span class="material-symbols-outlined mr-3">school</span>Manage Students</a><div class="text-on-primary-container/40 text-label-sm font-label-sm px-4 mb-2 mt-6 uppercase tracking-widest">Assessment</div><a class="flex items-center px-4 py-3 text-body-md font-body-md transition-all hover:bg-surface-variant/10" data-path="manage-quiz" href="#"><span class="material-symbols-outlined mr-3">quiz</span>Manage Quiz</a><a aria-current="page" class="flex items-center px-4 py-3 font-body-md transition-all bg-secondary-container text-on-secondary-container rounded-xl shadow-md" data-path="quiz-builder" href="#"><span class="material-symbols-outlined mr-3">edit_note</span>Quiz Builder</a><a class="flex items-center px-4 py-3 text-body-md font-body-md transition-all hover:bg-surface-variant/10" data-path="attempt-quizzes" href="#"><span class="material-symbols-outlined mr-3">play_circle</span>Attempt Quizzes</a></nav></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-margin-desktop"><div class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined">search</span><span class="text-label-sm font-label-sm">Search quizzes, students or reports...</span></div><div class="flex items-center gap-gutter"><div class="flex flex-col items-end"><span class="text-label-sm font-label-sm text-on-surface">Institution Admin</span><span class="text-[11px] text-on-surface-variant">admin@quizflow.edu</span></div><img alt="Profile" class="w-10 h-10 rounded-full object-cover ring-2 ring-surface-container-high transition-transform hover:scale-105 shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWMqjgzrR9eLMPt0XlTUWywCHHvBNfA-1hdoeS_PQPYBNfnDVbVk5zbq7y3WmGMVLWc14Gn982Gzhu7MGwNL-oUVQKbLcIvRpFm2dzh5BJken9YKsSYgy1_GxNv4L5H7D3_Jw9Tz1I8Hq0gmZfyqRjMo9GnrKRXiNgsznqRo8eRc08cnupiNBSljX3qhOqSQVXspe1s2d6oaDM7TvHzXRybEZ8Ox80ylmY25v08ohWHq9j3JW62Invsw"/></div></header><main class="relative pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full h-[calc(100vh-80px)]">
+<!-- Top Action Bar -->
+<div class="flex-none bg-surface-container-lowest px-margin-desktop py-4 shadow-sm flex items-center justify-between z-10 sticky top-0">
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div>
+<h1 class="font-headline-md text-headline-md text-on-surface">Physics Term 1 Final</h1>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded text-[11px] font-label-sm tracking-wider uppercase bg-surface-container text-on-surface-variant">Draft</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">cloud_done</span> Last saved 2 mins ago
+                    </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-6 py-2.5 rounded-lg border border-outline text-on-surface font-label-sm text-label-sm hover:bg-surface-container-low transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">visibility</span> Preview
+            </button>
+<button class="px-6 py-2.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary/90 transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">publish</span> Save & Publish
+            </button>
+</div>
+</div>
+<!-- Main Workspace -->
+<div class="flex-1 flex overflow-hidden">
+<!-- Left: Question List -->
+<div class="w-80 flex-none bg-surface-container-low flex flex-col border-r border-outline-variant/30">
+<div class="p-4 flex items-center justify-between bg-surface-container-lowest shadow-sm z-10">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">24 Questions</span>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-primary hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto p-4 space-y-2 pb-24">
+<!-- Question Item Active -->
+<div class="group bg-primary-container text-on-primary-container rounded-lg p-3 cursor-pointer shadow-sm relative overflow-hidden flex items-start gap-3">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary"></div>
+<span class="font-label-sm text-label-sm opacity-60 mt-0.5">01</span>
+<div class="flex-1 min-w-0">
+<p class="font-body-md text-body-md text-[14px] truncate leading-tight">What is the formula for calculating kinetic energy?</p>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-label-sm bg-surface-container-highest text-on-surface-variant">Multiple Choice</span>
+</div>
+</div>
+<button class="opacity-0 group-hover:opacity-100 transition-opacity text-on-primary-container/60 hover:text-on-primary-container">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<!-- Question Item Inactive -->
+<div class="group bg-surface-container-lowest rounded-lg p-3 cursor-pointer hover:bg-surface-container-high transition-colors flex items-start gap-3 border border-transparent hover:border-outline-variant/50">
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">02</span>
+<div class="flex-1 min-w-0">
+<p class="font-body-md text-body-md text-[14px] text-on-surface truncate leading-tight">State Newton's First Law of Motion.</p>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-label-sm bg-surface-container text-on-surface-variant">Short Answer</span>
+</div>
+</div>
+</div>
+<!-- Question Item Inactive -->
+<div class="group bg-surface-container-lowest rounded-lg p-3 cursor-pointer hover:bg-surface-container-high transition-colors flex items-start gap-3 border border-transparent hover:border-outline-variant/50">
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">03</span>
+<div class="flex-1 min-w-0">
+<p class="font-body-md text-body-md text-[14px] text-on-surface truncate leading-tight">Which of the following is a scalar quantity?</p>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-label-sm bg-surface-container text-on-surface-variant">Multiple Choice</span>
+</div>
+</div>
+</div>
+<!-- Empty State area at bottom to allow dropping new questions -->
+<div class="mt-4 p-4 border-2 border-dashed border-outline-variant/40 rounded-xl text-center flex flex-col items-center justify-center gap-2 text-on-surface-variant hover:border-primary hover:text-primary transition-colors cursor-pointer bg-surface-container-lowest/50">
+<span class="material-symbols-outlined opacity-50">note_add</span>
+<span class="font-label-sm text-label-sm">Add New Question</span>
+</div>
+</div>
+</div>
+<!-- Center: Editor -->
+<div class="flex-1 flex flex-col overflow-y-auto bg-surface relative">
+<div class="max-w-3xl w-full mx-auto p-margin-desktop space-y-8 pb-32">
+<!-- Editor Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center font-headline-md text-headline-md">1</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Edit Question</h2>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-lowest px-4 py-2 rounded-xl shadow-sm">
+<div class="flex flex-col">
+<label class="text-[10px] font-label-sm text-on-surface-variant uppercase tracking-wider">Points</label>
+<input class="w-16 font-body-md text-body-md text-on-surface bg-transparent outline-none border-b border-transparent focus:border-primary transition-colors" type="number" value="5"/>
+</div>
+<div class="w-px h-8 bg-outline-variant/30"></div>
+<div class="flex flex-col">
+<label class="text-[10px] font-label-sm text-on-surface-variant uppercase tracking-wider">Type</label>
+<select class="font-body-md text-body-md text-on-surface bg-transparent outline-none cursor-pointer">
+<option>Multiple Choice</option>
+<option>Short Answer</option>
+<option>True/False</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Rich Text Editor (Question) -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden flex flex-col">
+<div class="bg-surface-container-low px-4 py-2 flex items-center gap-2 border-b border-outline-variant/20 overflow-x-auto">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">format_bold</span></button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">format_italic</span></button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">format_underlined</span></button>
+<div class="w-px h-4 bg-outline-variant/40 mx-1"></div>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">format_list_bulleted</span></button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">format_list_numbered</span></button>
+<div class="w-px h-4 bg-outline-variant/40 mx-1"></div>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">functions</span></button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">image</span></button>
+</div>
+<textarea class="w-full min-h-[120px] p-4 bg-transparent outline-none font-body-lg text-body-lg text-on-surface resize-y" placeholder="Type your question here...">What is the formula for calculating kinetic energy?</textarea>
+</div>
+<!-- Options -->
+<div class="space-y-4">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest pl-1">Answer Options</h3>
+<div class="space-y-3">
+<!-- Option A -->
+<div class="flex items-center gap-3 group">
+<label class="relative flex items-center justify-center cursor-pointer">
+<input class="peer sr-only" name="correct_answer" type="radio"/>
+<div class="w-6 h-6 rounded-full border-2 border-outline peer-checked:border-primary flex items-center justify-center transition-colors">
+<div class="w-2.5 h-2.5 rounded-full bg-primary opacity-0 peer-checked:opacity-100 transition-opacity"></div>
+</div>
+</label>
+<div class="flex-1 bg-surface-container-lowest rounded-xl shadow-sm border border-transparent focus-within:border-primary focus-within:shadow-md transition-all flex items-center overflow-hidden">
+<div class="px-4 py-3 bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm border-r border-outline-variant/20">A</div>
+<input class="flex-1 bg-transparent px-4 py-3 outline-none font-body-md text-body-md text-on-surface" type="text" value="KE = 1/2 mv^2"/>
+<button class="px-3 text-on-surface-variant/50 hover:text-error opacity-0 group-hover:opacity-100 transition-opacity"><span class="material-symbols-outlined text-[20px]">delete</span></button>
+</div>
+</div>
+<!-- Option B (Correct) -->
+<div class="flex items-center gap-3 group">
+<label class="relative flex items-center justify-center cursor-pointer">
+<input checked="" class="peer sr-only" name="correct_answer" type="radio"/>
+<div class="w-6 h-6 rounded-full border-2 border-outline peer-checked:border-primary flex items-center justify-center transition-colors">
+<div class="w-2.5 h-2.5 rounded-full bg-primary opacity-0 peer-checked:opacity-100 transition-opacity"></div>
+</div>
+</label>
+<div class="flex-1 bg-primary/5 rounded-xl shadow-sm border border-primary focus-within:shadow-md transition-all flex items-center overflow-hidden">
+<div class="px-4 py-3 bg-primary text-on-primary font-label-sm text-label-sm border-r border-primary">B</div>
+<input class="flex-1 bg-transparent px-4 py-3 outline-none font-body-md text-body-md text-on-surface" type="text" value="KE = mgh"/>
+<span class="px-3 text-primary text-[11px] font-label-sm uppercase tracking-wider bg-primary/10 rounded mr-2 py-1 flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">check_circle</span> Correct</span>
+<button class="px-3 text-on-surface-variant/50 hover:text-error opacity-0 group-hover:opacity-100 transition-opacity"><span class="material-symbols-outlined text-[20px]">delete</span></button>
+</div>
+</div>
+<!-- Option C -->
+<div class="flex items-center gap-3 group">
+<label class="relative flex items-center justify-center cursor-pointer">
+<input class="peer sr-only" name="correct_answer" type="radio"/>
+<div class="w-6 h-6 rounded-full border-2 border-outline peer-checked:border-primary flex items-center justify-center transition-colors">
+<div class="w-2.5 h-2.5 rounded-full bg-primary opacity-0 peer-checked:opacity-100 transition-opacity"></div>
+</div>
+</label>
+<div class="flex-1 bg-surface-container-lowest rounded-xl shadow-sm border border-transparent focus-within:border-primary focus-within:shadow-md transition-all flex items-center overflow-hidden">
+<div class="px-4 py-3 bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm border-r border-outline-variant/20">C</div>
+<input class="flex-1 bg-transparent px-4 py-3 outline-none font-body-md text-body-md text-on-surface" type="text" value="KE = Fd"/>
+<button class="px-3 text-on-surface-variant/50 hover:text-error opacity-0 group-hover:opacity-100 transition-opacity"><span class="material-symbols-outlined text-[20px]">delete</span></button>
+</div>
+</div>
+</div>
+<button class="flex items-center gap-2 text-primary font-label-sm text-label-sm py-2 px-1 hover:bg-primary/5 rounded transition-colors ml-9">
+<span class="material-symbols-outlined text-[18px]">add</span> Add Option
+                    </button>
+</div>
+<!-- Explanation -->
+<div class="space-y-2 pt-4">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest pl-1">Explanation (Optional)</h3>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/30 p-4 focus-within:border-primary transition-colors">
+<textarea class="w-full bg-transparent outline-none font-body-md text-body-md text-on-surface min-h-[80px] resize-y" placeholder="Explain why the correct answer is right..."></textarea>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Settings Panel -->
+<div class="w-80 flex-none bg-surface-container-lowest shadow-[-4px_0_24px_rgba(0,0,0,0.02)] z-10 flex flex-col">
+<div class="p-6 border-b border-outline-variant/20">
+<h2 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">settings</span> Quiz Settings
+                </h2>
+</div>
+<div class="flex-1 overflow-y-auto p-6 space-y-8">
+<!-- Setting Group -->
+<div class="space-y-4">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Timing & Access</h3>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface">Time Limit (Minutes)</label>
+<input class="w-full bg-surface-container rounded-lg px-4 py-2.5 outline-none font-body-md text-body-md text-on-surface focus:ring-2 focus:ring-primary/20 focus:border-primary border border-transparent transition-all" type="number" value="45"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface">Available From</label>
+<input class="w-full bg-surface-container rounded-lg px-4 py-2.5 outline-none font-body-md text-body-md text-on-surface focus:ring-2 focus:ring-primary/20 focus:border-primary border border-transparent transition-all" type="datetime-local"/>
+</div>
+</div>
+<!-- Setting Group -->
+<div class="space-y-4">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Grading</h3>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface flex items-center justify-between">
+                            Passing Score (%)
+                            <span class="text-primary font-headline-md text-[16px]">60%</span>
+</label>
+<input class="w-full accent-primary mt-2" max="100" min="0" type="range" value="60"/>
+</div>
+</div>
+<!-- Toggles -->
+<div class="space-y-4">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Behavior</h3>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface">Shuffle Questions</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Randomize order for each student</span>
+</div>
+<div class="relative">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-10 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface">Show Results Immediately</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Students see score after submit</span>
+</div>
+<div class="relative">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-10 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</label>
+</div>
+</div>
+<!-- Decorative Visual in Settings -->
+<div class="p-6 mt-auto">
+<div class="w-full h-32 rounded-xl bg-gradient-to-br from-primary-container/40 to-surface-container flex items-center justify-center relative overflow-hidden">
+<svg class="absolute w-full h-full text-primary/10" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0,50 Q25,20 50,50 T100,50 L100,100 L0,100 Z" fill="currentColor"></path>
+</svg>
+<div class="relative z-10 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-[32px] mb-1">analytics</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant uppercase tracking-widest">Total Points</span>
+<span class="font-headline-md text-[24px] text-on-surface">120</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

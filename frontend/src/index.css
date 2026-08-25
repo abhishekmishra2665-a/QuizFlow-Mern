@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  /* =========================
+     Colors
+  ========================== */
+  --bg: #f9f9ff;
+
+  --primary: #004ac6;
+  --primary-hover: #003a9e;
+  --primary-light: #e8f0ff;
+
+  --secondary: #07006c;
+  --secondary-light: #edebff;
+
+  /* =========================
+     Text
+  ========================== */
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  --text-white: #ffffff;
+
+  /* =========================
+     Border
+  ========================== */
+  --border: #e2e8f0;
+  --border-light: #f1f5f9;
+  --border-dark: #cbd5e1;
+  --border-primary: #004ac6;
+
+  /* =========================
+     Status
+  ========================== */
+  --success: #16a34a;
+  --error: #dc2626;
+  --warning: #f59e0b;
+
+  /* =========================
+     Shadows
+  ========================== */
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 10px 25px rgba(15, 23, 42, 0.1);
+  --shadow-xl: 0 20px 40px rgba(15, 23, 42, 0.12);
+  --shadow-primary: 0 6px 16px rgba(0, 74, 198, 0.2);
+
+  /* =========================
+     Typography
+  ========================== */
+  --font-family:
+    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+}
+
+main {
+  padding: 40px;
+}
+
+main > * {
+  max-width: 1300px;
+  margin: auto;
+}
