@@ -1,12 +1,21 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { MdCheckCircle, MdClose, MdInfo, MdArrowBack, MdDownload, MdRefresh } from "react-icons/md";
+import {
+  MdCheckCircle,
+  MdClose,
+  MdInfo,
+  MdArrowBack,
+  MdDownload,
+  MdRefresh,
+} from "react-icons/md";
 import "./QuizResult.css";
 
 function QuizResult() {
   const location = useLocation();
   const navigate = useNavigate();
   const { answers, quiz } = location.state || {};
+  console.log(answers);
+  console.log(quiz);
 
   const [activeTab, setActiveTab] = useState("summary");
   const [expandedQuestions, setExpandedQuestions] = useState(new Set());
@@ -22,7 +31,7 @@ function QuizResult() {
   let totalMarks = 0;
   let obtainedMarks = 0;
 
-  quiz.questions.forEach((q,index) => {
+  quiz.questions.forEach((q, index) => {
     totalMarks += quiz.correctMarks;
     const userAnswer = answers[index];
     if (userAnswer !== undefined) {
@@ -33,7 +42,8 @@ function QuizResult() {
     }
   });
 
-  const percentage = totalMarks > 0 ? Math.round((obtainedMarks / totalMarks) * 100) : 0;
+  const percentage =
+    totalMarks > 0 ? Math.round((obtainedMarks / totalMarks) * 100) : 0;
   const wrongCount = answeredCount - correctCount;
   const unattemptedCount = totalQuestions - answeredCount;
 
@@ -49,7 +59,7 @@ function QuizResult() {
     });
   };
 
-  const getStatus = (question,index) => {
+  const getStatus = (question, index) => {
     const userAnswer = answers[index];
     if (userAnswer === undefined) return "unattempted";
     return userAnswer === question.correctOption ? "correct" : "incorrect";
@@ -57,17 +67,23 @@ function QuizResult() {
 
   const getStatusIcon = (status) => {
     switch (status) {
-      case "correct": return <MdCheckCircle className="status-icon correct" />;
-      case "incorrect": return <MdClose className="status-icon incorrect" />;
-      default: return <MdInfo className="status-icon unattempted" />;
+      case "correct":
+        return <MdCheckCircle className="status-icon correct" />;
+      case "incorrect":
+        return <MdClose className="status-icon incorrect" />;
+      default:
+        return <MdInfo className="status-icon unattempted" />;
     }
   };
 
   const getStatusLabel = (status) => {
     switch (status) {
-      case "correct": return "Correct";
-      case "incorrect": return "Incorrect";
-      default: return "Unattempted";
+      case "correct":
+        return "Correct";
+      case "incorrect":
+        return "Incorrect";
+      default:
+        return "Unattempted";
     }
   };
 
@@ -82,7 +98,10 @@ function QuizResult() {
           <span className="subject-tag">{quiz.subject}</span>
         </div>
         <div className="header-actions">
-          <button className="action-btn outline" onClick={() => navigate(`/quiz/${quiz.id}/solve`)}>
+          <button
+            className="action-btn outline"
+            onClick={() => navigate(`/quiz/${quiz.id}/solve`)}
+          >
             <MdRefresh />
             <span>Re-attempt</span>
           </button>
@@ -190,16 +209,23 @@ function QuizResult() {
                   <h3>Performance Overview</h3>
                   <div className="overview-stats">
                     <div className="overview-item">
-                      <span className="overview-value">{answeredCount}/{totalQuestions}</span>
+                      <span className="overview-value">
+                        {answeredCount}/{totalQuestions}
+                      </span>
                       <span className="overview-label">Attempted</span>
                     </div>
                     <div className="overview-item">
-                      <span className="overview-value">{correctCount}/{answeredCount}</span>
+                      <span className="overview-value">
+                        {correctCount}/{answeredCount}
+                      </span>
                       <span className="overview-label">Accuracy</span>
                     </div>
                     <div className="overview-item">
                       <span className="overview-value">
-                        {answeredCount > 0 ? Math.round((correctCount / answeredCount) * 100) : 0}%
+                        {answeredCount > 0
+                          ? Math.round((correctCount / answeredCount) * 100)
+                          : 0}
+                        %
                       </span>
                       <span className="overview-label">Precision</span>
                     </div>
@@ -210,12 +236,15 @@ function QuizResult() {
               <div className="question-list-summary">
                 <h3>Question-wise Result</h3>
                 <div className="summary-questions">
-                  {quiz.questions.map((question,index) => {
-                    const status = getStatus(question,index);
+                  {quiz.questions.map((question, index) => {
+                    const status = getStatus(question, index);
                     return (
-                      <div key={question._id} className={`summary-question ${status}`}>
+                      <div
+                        key={question._id}
+                        className={`summary-question ${status}`}
+                      >
                         <div className="sq-header">
-                          <span className="sq-number">Q{index}</span>
+                          <span className="sq-number">Q {index + 1}</span>
                           <span className={`sq-status ${status}`}>
                             {getStatusIcon(status)}
                             {getStatusLabel(status)}
@@ -232,16 +261,22 @@ function QuizResult() {
 
           {activeTab === "review" && (
             <div className="review-tab">
-              {quiz.questions.map((question,index) => {
+              {quiz.questions.map((question, index) => {
                 const userAnswer = answers[index];
-                const status = getStatus(question,index);
-                const isExpanded = expandedQuestions.has(question.id);
+                const status = getStatus(question, index);
+                const isExpanded = expandedQuestions.has(question._id);
 
                 return (
-                  <div key={question.id} className={`review-question ${status}`}>
-                    <div className="rq-header" onClick={() => toggleExpand(question.id)}>
+                  <div
+                    key={question._id}
+                    className={`review-question ${status}`}
+                  >
+                    <div
+                      className="rq-header"
+                      onClick={() => toggleExpand(question._id)}
+                    >
                       <div className="rq-left">
-                        <span className="rq-number">Q{index}</span>
+                        <span className="rq-number">Q{question.id}</span>
                         <span className={`rq-status ${status}`}>
                           {getStatusIcon(status)}
                           {getStatusLabel(status)}
@@ -250,10 +285,12 @@ function QuizResult() {
                       <MdCheckCircle className="expand-icon" />
                     </div>
 
-                    <div className={`rq-content ${isExpanded ? "expanded" : ""}`}>
+                    <div
+                      className={`rq-content ${isExpanded ? "expanded" : ""}`}
+                    >
                       <div className="rq-question">
                         <h4>Question</h4>
-                        <p>{question.question}</p>
+                        <p>{question.title}</p>
                       </div>
 
                       <div className="rq-options">
@@ -261,18 +298,30 @@ function QuizResult() {
                         <div className="options-list">
                           {question.options.map((option, index) => {
                             const isUserAnswer = userAnswer === index;
-                            const isCorrectAnswer = question.correctAnswer === index;
+                            const isCorrectAnswer =
+                              question.correctAnswer === index;
                             let optionClass = "";
                             if (isCorrectAnswer) optionClass = "correct-answer";
-                            else if (isUserAnswer && !isCorrectAnswer) optionClass = "user-wrong";
-                            else if (isUserAnswer && isCorrectAnswer) optionClass = "user-correct";
+                            else if (isUserAnswer && !isCorrectAnswer)
+                              optionClass = "user-wrong";
+                            else if (isUserAnswer && isCorrectAnswer)
+                              optionClass = "user-correct";
 
                             return (
-                              <div key={index} className={`option-item ${optionClass}`}>
-                                <span className="option-letter">{String.fromCharCode(65 + index)}</span>
+                              <div
+                                key={index}
+                                className={`option-item ${optionClass}`}
+                              >
+                                <span className="option-letter">
+                                  {String.fromCharCode(65 + index)}
+                                </span>
                                 <span className="option-text">{option}</span>
-                                {isCorrectAnswer && <MdCheckCircle className="correct-badge" />}
-                                {isUserAnswer && !isCorrectAnswer && <MdClose className="wrong-badge" />}
+                                {isCorrectAnswer && (
+                                  <MdCheckCircle className="correct-badge" />
+                                )}
+                                {isUserAnswer && !isCorrectAnswer && (
+                                  <MdClose className="wrong-badge" />
+                                )}
                               </div>
                             );
                           })}

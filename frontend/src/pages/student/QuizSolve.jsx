@@ -172,9 +172,8 @@ function QuizSolve() {
   const { quizId } = useParams();
   const navigate = useNavigate();
   const [quiz, setQuiz] = useState({
-    questions : []
+    questions: []
   });
-
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState({});
@@ -191,6 +190,7 @@ function QuizSolve() {
         alert("Some Error Occured");
       }
     }
+
     getData();
   }, []);
 
@@ -222,7 +222,7 @@ function QuizSolve() {
     navigate(`/quiz/${quizId}/result`, { state: { answers, quiz } });
   };
 
-  const question = quiz?.questions[currentQuestion];
+  const question = quiz?.questions?.[currentQuestion];
 
   return (
     <div className="quiz-solve-page">

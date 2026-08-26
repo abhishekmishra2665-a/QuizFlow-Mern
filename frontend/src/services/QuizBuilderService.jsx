@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import api from "../api/api";
+import { useEffect } from "react";
+
 function useQuiz() {
   const [questions, setQuestions] = useState([
     {
@@ -9,6 +11,7 @@ function useQuiz() {
       explanation: "",
     },
   ]);
+
   const [quizSettings, setQuizSetting] = useState({
     quizTitle: "",
     batch: "",
@@ -16,20 +19,22 @@ function useQuiz() {
     incorrectMarks: 0,
   });
 
-  const [batches,setBatches] = useState([]);
+  const [batches, setBatches] = useState([]);
 
-  async function getBatches() {
-    const response = await api.get("/batch/get-all");
-    if (response.data?.success) {
-      setBatches(response.data?.data);
+  useEffect(() => {
+    async function getBatches() {
+      const response = await api.get("/batch/get-all");
+      if (response.data?.success) {
+        setBatches(response.data?.data);
+      }
     }
-  }
-
-  useEffect(() => {getBatches()}, [])
+    getBatches();
+  }, []);
 
   function handleQuizSettingsChange(field, value) {
     setQuizSetting({ ...quizSettings, [field]: value });
   }
+
   function addQuestion() {
     const newQuestion = {
       title: "",
@@ -37,8 +42,10 @@ function useQuiz() {
       correctOption: 0,
       explanation: "",
     };
+
     setQuestions([...questions, newQuestion]);
   }
+
   function handleQuestionChange(index, fieldName, value) {
     const temp = { ...questions[index] };
     temp[fieldName] = value;
@@ -46,6 +53,7 @@ function useQuiz() {
     tempQuestions[index] = temp;
     setQuestions(tempQuestions);
   }
+
   function handleQuizOptionChange(questionIndex, optionIndex, value) {
     const tempQuestion = { ...questions[questionIndex] };
     tempQuestion.options[optionIndex] = value;
@@ -53,6 +61,7 @@ function useQuiz() {
     temp[questionIndex] = tempQuestion;
     setQuestions(temp);
   }
+
   function handleMarkCorrectOption(questionIndex, optionIndex) {
     const tempQuestion = { ...questions[questionIndex] };
     tempQuestion.correctOption = optionIndex;
@@ -60,6 +69,7 @@ function useQuiz() {
     temp[questionIndex] = tempQuestion;
     setQuestions(temp);
   }
+
   async function handleSubmit() {
     const data = {
       title: quizSettings.quizTitle,
@@ -75,6 +85,7 @@ function useQuiz() {
       alert("Some Error Occured...");
     }
   }
+
   return {
     questions,
     addQuestion,
@@ -87,4 +98,5 @@ function useQuiz() {
     batches,
   };
 }
+
 export default useQuiz;
